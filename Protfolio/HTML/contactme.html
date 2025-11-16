@@ -2,64 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="CSS/Contactme1.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="CSS/contactme1.css">
 </head>
 
 <body>
 
-    <h1>Contact Me</h1>
+    <nav class=" navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./experience.html">Experience</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+        </ul>
+    </nav>
 
-    <form method="GET">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <h4>H#429, R#07, Block#D,Bashundhara R/A, Dhaka-1229 </h4>
+        <h4>Email:22-49570-3@student.aiub.edu</h4>
+        <h4>Phone: +8801755555555</h4>
 
-        <fieldset>
-            <legend>Personal Information</legend>
+        <form method="GET">
 
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required><br>
+            <div class="textbox">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required />
+            </div>
 
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required><br>
+            <div class="textbox">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required />
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <div class="textbox">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
 
-            <label for="company">Company:</label>
-            <input type="text" id="company" name="company"><br>
-        </fieldset>
+            <div class="textbox">
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" />
+            </div>
 
-        <fieldset>
-            <legend>Reason for Contact</legend>
+            <h3>Select Your Reason:</h3>
+            <div class="options">
+                <label><input type="radio" name="reason" value="project" required /> Project</label>
+                <label><input type="radio" name="reason" value="Thesis / Research" /> Thesis / Research</label>
+                <label><input type="radio" name="reason" value="Job / Freelance Work" /> Job / Freelance Work</label>
+                <label><input type="radio" name="reason" value="Collaboration" required /> Collaboration</label>
+                <label><input type="radio" name="reason" value="Consultation" /> Consultation</label>
+            </div>
 
-            <input type="radio" id="project" name="Reason" value="Project">
-            <label for="project">Project</label><br>
+            <h3>Available Services:</h3>
+            <div class="options">
+                <label><input type="checkbox" name="services" value="dl" /> Machine Learning</label>
+                <label><input type="checkbox" name="services" value="ds" /> Data Science</label>
+                <label><input type="checkbox" name="services" value="nlp" /> Cloud Computing</label>
+                <label><input type="checkbox" name="services" value="cv" /> Web Development</label>
+                <label><input type="checkbox" name="services" value="cv" /> Mobile App Development</label>
+                <label><input type="checkbox" name="services" value="cv" /> Cybersecurity</label>
+                <label><input type="checkbox" name="services" value="cv" /> IoT Solutions</label>
+            </div>
 
-            <input type="radio" id="thesis" name="Reason" value="Thesis">
-            <label for="thesis">Thesis</label><br>
+            <div class="textbox">
+                <label for="appointment_date">Appointment Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+            </div>
 
-            <input type="radio" id="job" name="Reason" value="Job">
-            <label for="job">Job</label><br>
-        </fieldset>
 
-        <fieldset>
-            <legend>Services Provided</legend>
+            <div class="buttons">
+                <button class="submit-btn">Book Appointment</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
 
-            <input type="checkbox" id="service1" name="service" value="Project Guide">
-            <label for="service1">Project Guide (Java, Python, HTML/CSS, PHP)</label><br>
+        </form>
 
-            <input type="checkbox" id="service2" name="service" value="ML/AI">
-            <label for="service2">Machine learning, AI, Data Science Paper submission guide</label><br>
-
-            <input type="checkbox" id="service3" name="service" value="Internship">
-            <label for="service3">Internship At Tech.Group</label><br>
-        </fieldset>
-
-        <input type="submit" value="Register">
-        <input type="reset" value="Full Reset">
-
-    </form>
+    </div>
 
 </body>
 

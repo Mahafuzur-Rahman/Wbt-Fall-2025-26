@@ -1,67 +1,146 @@
+/* ------------------------------  
+   Global
+------------------------------ */
 body {
-    background-color: #e8e8e9;
-    margin: 20px;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(to right, #89cff0, #d7e9ff);
+    margin: 0;
+    padding: 0;
 }
 
-h1,
-h2,
-h3 {
-    color: skyblue;
+/* ------------------------------  
+   Navbar
+------------------------------ */
+.navbar {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-form {
-    background-color: rgb(251, 251, 216);
-    padding: 20px;
-    border-radius: 20px;
-    max-width: 450px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
 }
 
-/* label + input on same line */
-.row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
+.navbar ul li {
+    display: inline-block;
+    margin: 0 18px;
 }
 
-.row label {
-    width: 130px;
-    font-size: 16px;
-    color: #0077b6;
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #003f8c;
+    font-weight: bold;
+    padding: 6px 10px;
+    transition: 0.3s;
 }
 
-.row input,
-.row select {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #0077b6;
-    border-radius: 5px;
-}
-
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #0077b6;
-    border-radius: 5px;
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background-color: #0077b6;
+.navbar ul li a:hover {
     color: white;
+    background: #003f8c;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* ------------------------------  
+   Container / Card
+------------------------------ */
+.container {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    margin: 50px auto;
+    padding: 35px 40px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #002b5b;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------  
+   Form Fields
+------------------------------ */
+.textbox {
+    margin-bottom: 20px;
+}
+
+.textbox label {
+    font-weight: 600;
+    color: #002b5b;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #b0c4de;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.textbox input:focus {
+    border-color: #0056c9;
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+    outline: none;
+}
+
+/* Radio & Checkboxes Section */
+.options label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* ------------------------------  
+   Buttons
+------------------------------ */
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-btn,
+.reset-btn {
+    padding: 12px 22px;
     border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    margin: 0 7px;
+    transition: 0.3s;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #98a2b0;
+/* Submit Button */
+.submit-btn {
+    background: #0056c9;
+    color: white;
 }
 
-select {
-    background-color: white;
+.submit-btn:hover {
+    background: #003f8c;
+    transform: translateY(-3px);
+}
+
+/* Reset Button */
+.reset-btn {
+    background: #e6eefc;
+    color: #003f8c;
+}
+
+.reset-btn:hover {
+    background: #cbdcf7;
+    transform: translateY(-3px);
 }
